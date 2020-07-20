@@ -1,0 +1,217 @@
+Implemente um sistema para uma empresa de eventos. Cada evento deve ter um nome, um responsável, as datas de início e fim, uma carga horária e lista de palestras. 
+
+Os dados mínimos esperados para o responsável são nome completo, telefone para contato e valor por hora, mas, se for necessário, é possível incluir outras informações. Cada palestra deve ter um título, horário de início, palestrante, uma descrição e carga horária. Por fim, um palestrante terá o seu nome, contato e valor de uma hora de sua palestra.
+
+O sistema deve fornecer:
+1. o valor gasto com o responsável;
+2. o valor total dos gastos com as palestras;
+3. o valor total gasto por palestra;
+4. os dados do palestrante com o maior e menor valor gasto em sua palestra.
+
+Trabalhe esse código em seu IDE, suba ele para sua conta no GitHub e compartilhe o link desse projeto no campo ao lado para que outros desenvolvedores possam analisá-lo.
+
+
+
+Etapas do projeto:
+
+1. Definir o passo a passo de execução do programa, por meio de um rascunho; (OK)
+2. Codificar no IDE; (OK)
+3. Salvar uma cópia em texto neste bloco de notas; (OK)
+4. Criar um repositório no GitHub ("Curso-AD-Projeto4"); (OK)
+5. Criar um Git Bash no diretório do projeto;
+6. Sincronizar o diretório do projeto com o GitHub;
+7. Copia o link do repositório no GitHub e envia o trabalho.
+
+
+
+Codificação no Eclipse:
+
+
+
+
+class Eventos {
+	String Evento;
+	String Tutor;
+	String Telefone;
+	float ValorTutor;
+	String Inicio;
+	String Termino;
+	float Duracao;
+	
+	float ValorT() {
+		float ValorTutoria = ValorTutor * Duracao;
+		return ValorTutoria;
+	}
+	
+	void ValorTutoria() {
+		ValorT();
+		System.out.println("Valor da tutoria: "+ValorT());
+	}
+	
+	void imprimirEvento() {
+		System.out.println("Nome do evento: "+Evento);
+		System.out.println("Tutor responsável pelo evento: "+Tutor);
+		System.out.println("Telefone de contato do tutor com DDD: "+Telefone);
+		System.out.println("Valor hora/aula do tutor: "+ValorTutor);
+		System.out.println("Data de início do evento (DD/MM/AAAA): "+Inicio);
+		System.out.println("Data de término do evento (DD/MM/AAAA): "+Termino);
+		System.out.println("Carga horária total do evento: "+Duracao);
+	}
+
+}
+
+
+
+class Palestra {
+	String Titulo;
+	String HoraInicio;
+	String Descricao;
+	float CargaHoraria;
+	String Palestrante;
+	String ContatoPalestrante;
+	float ValorPalestrante;
+	
+	float ValorP() {
+		float ValorPalestra = ValorPalestrante * CargaHoraria;
+		return ValorPalestra;
+	}
+	
+	void ValorPalestra() {
+		float ValorPalestra = ValorPalestrante * CargaHoraria;
+		System.out.println("Valor da palestra: "+ValorPalestra);
+	}
+	void imprimirPalestra() {
+		System.out.println("Título da palestra: "+Titulo);
+		System.out.println("Hora de início: "+HoraInicio);
+		System.out.println("Descrição da palestra: "+Descricao);
+		System.out.println("CargaHoraria: "+CargaHoraria);
+		System.out.println("Palestrante: "+Palestrante);
+		System.out.println("Telefone de contato do palestrante com DDD: "+ContatoPalestrante);
+		System.out.println("Valor da palestra por hora: "+ValorPalestrante);
+	}
+}
+
+
+
+public class ControleDeEventos {
+
+	public static void main(String[] args) {
+		// Controle dos eventos promovidos pela instituição. Lembrar que os objetos devem reportar aos atributos e aos métodos das classes "Eventos" e "Palestra".
+		Eventos Evento1 = new Eventos();
+		Evento1.Evento = "";
+		Evento1.Tutor = "";
+		Evento1.Telefone = "";
+		Evento1.ValorTutor = 100;
+		Evento1.Inicio = "";
+		Evento1.Termino = "";
+		Evento1.Duracao = 40;
+		Evento1.imprimirEvento();
+		Evento1.ValorTutoria();
+		System.out.println("");
+		
+				Palestra PalestraN[] = {new Palestra(), new Palestra(), new Palestra(), new Palestra(), new Palestra()};
+				PalestraN[0].Titulo = "ABCD";
+				PalestraN[0].HoraInicio = "";
+				PalestraN[0].Descricao = "";
+				PalestraN[0].CargaHoraria = 8;
+				PalestraN[0].Palestrante = "";
+				PalestraN[0].ContatoPalestrante = "";
+				PalestraN[0].ValorPalestrante = 10;
+				PalestraN[0].imprimirPalestra();
+				PalestraN[0].ValorPalestra();
+				System.out.println("");
+				
+				PalestraN[1].Titulo = "";
+				PalestraN[1].HoraInicio = "";
+				PalestraN[1].Descricao = "";
+				PalestraN[1].CargaHoraria = 8;
+				PalestraN[1].Palestrante = "";
+				PalestraN[1].ContatoPalestrante = "";
+				PalestraN[1].ValorPalestrante = 15;
+				PalestraN[1].imprimirPalestra();
+				PalestraN[1].ValorPalestra();
+				System.out.println("");
+				
+				PalestraN[2].Titulo = "";
+				PalestraN[2].HoraInicio = "";
+				PalestraN[2].Descricao = "";
+				PalestraN[2].CargaHoraria = 8;
+				PalestraN[2].Palestrante = "";
+				PalestraN[2].ContatoPalestrante = "";
+				PalestraN[2].ValorPalestrante = 20;
+				PalestraN[2].imprimirPalestra();
+				PalestraN[2].ValorPalestra();
+				System.out.println("");
+				
+				PalestraN[3].Titulo = "";
+				PalestraN[3].HoraInicio = "";
+				PalestraN[3].Descricao = "";
+				PalestraN[3].CargaHoraria = 8;
+				PalestraN[3].Palestrante = "";
+				PalestraN[3].ContatoPalestrante = "";
+				PalestraN[3].ValorPalestrante = 25;
+				PalestraN[3].imprimirPalestra();
+				PalestraN[3].ValorPalestra();
+				System.out.println("");
+				
+				PalestraN[4].Titulo = "WXYZ";
+				PalestraN[4].HoraInicio = "";
+				PalestraN[4].Descricao = "";
+				PalestraN[4].CargaHoraria = 8;
+				PalestraN[4].Palestrante = "";
+				PalestraN[4].ContatoPalestrante = "";
+				PalestraN[4].ValorPalestrante = 30;
+				PalestraN[4].imprimirPalestra();
+				PalestraN[4].ValorPalestra();
+				System.out.println("");
+				
+				float ValorTotal = Evento1.ValorT() + PalestraN[0].ValorP() + PalestraN[1].ValorP() + PalestraN[2].ValorP() + PalestraN[3].ValorP() + PalestraN[4].ValorP();
+				System.out.println("Valor total do evento: "+ValorTotal);
+				
+				if(PalestraN[0].ValorP() >= PalestraN[1].ValorP())
+				{
+					System.out.println("Palestra com maior valor: "+PalestraN[0].ValorP()+" ("+PalestraN[0].Titulo+") ");
+				}else if(PalestraN[1].ValorP() >= PalestraN[2].ValorP())
+				{
+					System.out.println("Palestra com maior valor: "+PalestraN[1].ValorP()+" ("+PalestraN[1].Titulo+") ");
+				}else if(PalestraN[2].ValorP() >= PalestraN[3].ValorP())
+				{
+					System.out.println("Palestra com maior valor: "+PalestraN[2].ValorP()+" ("+PalestraN[2].Titulo+") ");
+				}else if(PalestraN[3].ValorP() >= PalestraN[4].ValorP())
+				{
+					System.out.println("Palestra com maior valor: "+PalestraN[3].ValorP()+" ("+PalestraN[3].Titulo+") ");
+				}else {
+					System.out.println("Palestra com maior valor: "+PalestraN[4].ValorP()+" ("+PalestraN[4].Titulo+") ");
+				}
+
+			
+				if(PalestraN[0].ValorP() <= PalestraN[1].ValorP())
+				{
+					System.out.println("Palestra com menor valor: "+PalestraN[0].ValorP()+" ("+PalestraN[0].Titulo+") ");
+				}else if(PalestraN[1].ValorP() <= PalestraN[2].ValorP())
+				{
+					System.out.println("Palestra com menor valor: "+PalestraN[1].ValorP()+" ("+PalestraN[1].Titulo+") ");
+				}else if(PalestraN[2].ValorP() <= PalestraN[3].ValorP())
+				{
+					System.out.println("Palestra com menor valor: "+PalestraN[2].ValorP()+" ("+PalestraN[2].Titulo+") ");
+				}else if(PalestraN[3].ValorP() <= PalestraN[4].ValorP())
+				{
+					System.out.println("Palestra com menor valor: "+PalestraN[3].ValorP()+" ("+PalestraN[3].Titulo+") ");
+				}else {
+					System.out.println("Palestra com menor valor: "+PalestraN[4].ValorP()+" ("+PalestraN[4].Titulo+") ");
+				}
+			
+			
+			
+			
+			}
+			
+		}
+
+
+
+
+
+
+
+									
